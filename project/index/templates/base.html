@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for x in ombor %}
+<h1 style="color:red">ID: {{x.id}}</h1>
+<h1>Name: {{x.name}}</h1>
+<h1>Number: {{x.age}}</h1>
+<h1 style="color:crimson">description:    {{x.description}}</h1>
+{% endfor %}
+{% for y in print %}
+<h1>{{y.age}}</h1>
+<h1>{{y.name}}</h1>
+{% endfor %}
+</body>
+</html>
