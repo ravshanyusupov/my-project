@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Id: {{ base1.id }}</h1>
+    <h1>Name: {{ base1.name }}</h1>
+    <h1>Description: {{ base1.description }}</h1>
+    <a href="{% url 'update' base1.id %}">Update</a>
+    <br><br>
+    <a href="{% url 'delete' base1.id %}">Delete</a>
+{% endblock %}

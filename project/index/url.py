@@ -4,7 +4,13 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.Mirjon)
+    path('', views.Mirjon, name='mirjon'),
+
+    path('create', views.create, name='create'),
+    path('update/<str:id>', views.update, name='update'),
+    path('delete/<str:id>', views.delete, name='delete'),
+
+    path('sec/<str:kalit>', views.second, name='sec'),
 ]
 
 if settings.DEBUG:

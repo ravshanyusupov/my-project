@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="{% url 'delete' user.id %}" method="post">
+    <h1>Are you sure to delete {{ user }}</h1>
+    <a href="{% url 'sec' user.id %}">Cancel</a>
+    <input type="submit">
+</form>
+</body>
+</html>

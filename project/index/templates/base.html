@@ -7,10 +7,27 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-{% for x in ombor %}
-<h1 style="color:red">{{x.main_id.age}}</h1>
-<h1 style="color:red">{{x.main_id.name}}{{ x.main_id.id }}</h1>
+<nav>
+    <ul style="display: flex; justify-content: space-around">
+        <li><a href="{% url 'create' %}">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Contact</a></li>
+        <li><a href="">More</a></li>
+    </ul>
+</nav>
+<a href="{% url 'create' %}">Create User</a>
+    {% for foo in base %}
+        <h2>{{ foo.name }}</h2>
+        <h2>{{ foo.age }}</h2>
+        <h2>{{ foo.description }}</h2><br>
+        <a href="{% url 'sec' foo.id %}">see more</a>
+    {% endfor %}
+{% block content %}
 
-{% endfor %}
+{% endblock %}
+
+<footer>
+    <center style="font-size: 30px">All rights reseved</center>
+</footer>
 </body>
 </html>

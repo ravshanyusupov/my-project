@@ -4,13 +4,10 @@ from .models import Main, MainId
 
 
 class MainStyle(admin.ModelAdmin):
-    list_display = ('age', 'name', 'id', 'img')
-    search_fields = ('age', 'name', 'id', 'img')
-    list_display_links = ('age', 'id', 'name')
-    list_per_page = 5
-    list_filter = ('age', 'name')
+    list_display = ('gender',)
+    prepopulated_fields = {'slug': ('gender',)}
 
 
-admin.site.register(Main, MainStyle)
-admin.site.register(MainId)
+admin.site.register(Main)
+admin.site.register(MainId, MainStyle)
 admin.site.site_header = 'Hello world'
